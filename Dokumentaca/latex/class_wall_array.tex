@@ -1,0 +1,117 @@
+\hypertarget{class_wall_array}{}\doxysection{Wall\+Array Class Reference}
+\label{class_wall_array}\index{WallArray@{WallArray}}
+
+
+Klasa odpoweidzialna za zbior scian.  
+
+
+
+
+{\ttfamily \#include $<$Level.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wall_array_aac0db09dff8aed4572a046b83ea31ff0}{Wall\+Array}} ()
+\item 
+void \mbox{\hyperlink{class_wall_array_a496c7d0fc570df0c0ba4f1c63d785f1c}{wall\+\_\+countdown}} ()
+\item 
+void \mbox{\hyperlink{class_wall_array_a1eddc201f8150152850199ad2cb377db}{check\+\_\+cornery}} ()
+\item 
+void \mbox{\hyperlink{class_wall_array_a5c3d185d1fb36bb6249c26d3302427e7}{update\+\_\+position}} ()
+\item 
+void \mbox{\hyperlink{class_wall_array_a8f04021aaf302af5858ee47336feb609}{check\+\_\+empty}} ()
+\item 
+bool \mbox{\hyperlink{class_wall_array_a6e7a189e8a8b4f4ff9e3d055dff9ac97}{get\+\_\+empty}} ()
+\item 
+deque$<$ \mbox{\hyperlink{class_wall}{Wall}} $>$\+::iterator \mbox{\hyperlink{class_wall_array_af5af057bcb89c4522cd4a45abd3698f6}{begin}} ()
+\item 
+deque$<$ \mbox{\hyperlink{class_wall}{Wall}} $>$\+::iterator \mbox{\hyperlink{class_wall_array_abbf45a896f023304ebae0584df7a65f4}{end}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_wall_array_a0a42553bfcf27459a894aac454ce36e4}\label{class_wall_array_a0a42553bfcf27459a894aac454ce36e4}} 
+Mat {\bfseries teks} \mbox{[}8\mbox{]}
+\item 
+\mbox{\Hypertarget{class_wall_array_aa74ad7225dc94defa0e7f97a583b3ca8}\label{class_wall_array_aa74ad7225dc94defa0e7f97a583b3ca8}} 
+Mat {\bfseries mask} \mbox{[}8\mbox{]}
+\item 
+\mbox{\Hypertarget{class_wall_array_ab031ddd33072dbd9139e1680911227b5}\label{class_wall_array_ab031ddd33072dbd9139e1680911227b5}} 
+deque$<$ \mbox{\hyperlink{class_wall}{Wall}} $>$ {\bfseries wallers}
+\item 
+\mbox{\Hypertarget{class_wall_array_a96a64debf2d130f4168b064e979635b8}\label{class_wall_array_a96a64debf2d130f4168b064e979635b8}} 
+int {\bfseries counter} = 0
+\item 
+\mbox{\Hypertarget{class_wall_array_ac110342df3ae6d30ee69710ba8ec9ae3}\label{class_wall_array_ac110342df3ae6d30ee69710ba8ec9ae3}} 
+float {\bfseries empty} = true
+\item 
+\mbox{\Hypertarget{class_wall_array_ac4ca689c67fdeb06a5d4e94f8044e9e8}\label{class_wall_array_ac4ca689c67fdeb06a5d4e94f8044e9e8}} 
+int {\bfseries sizex} = 190
+\item 
+\mbox{\Hypertarget{class_wall_array_a17fa375018d1c0bd0e320a914e60b1db}\label{class_wall_array_a17fa375018d1c0bd0e320a914e60b1db}} 
+int {\bfseries sizey} = 240
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa odpoweidzialna za zbior scian. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_wall_array_aac0db09dff8aed4572a046b83ea31ff0}\label{class_wall_array_aac0db09dff8aed4572a046b83ea31ff0}} 
+\index{WallArray@{WallArray}!WallArray@{WallArray}}
+\index{WallArray@{WallArray}!WallArray@{WallArray}}
+\doxysubsubsection{\texorpdfstring{WallArray()}{WallArray()}}
+{\footnotesize\ttfamily Wall\+Array\+::\+Wall\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Konstruktor zbioru �cian Nie pobiera argumentow Nastepuje w nim wczytanie tekstur i stworzenie pierwszych scian 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_wall_array_af5af057bcb89c4522cd4a45abd3698f6}\label{class_wall_array_af5af057bcb89c4522cd4a45abd3698f6}} 
+\index{WallArray@{WallArray}!begin@{begin}}
+\index{begin@{begin}!WallArray@{WallArray}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily deque$<$ \mbox{\hyperlink{class_wall}{Wall}} $>$\+::iterator Wall\+Array\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Znajduje wskaznik na poczatek zbioru pojedynczych scian, ktory jest deque bedacym elementem klasy \mbox{\hyperlink{class_wall_array}{Wall\+Array}} Nie pobiera argumentow Zwraca deque$<$\+Wall$>$\+::iterator \mbox{\Hypertarget{class_wall_array_a1eddc201f8150152850199ad2cb377db}\label{class_wall_array_a1eddc201f8150152850199ad2cb377db}} 
+\index{WallArray@{WallArray}!check\_cornery@{check\_cornery}}
+\index{check\_cornery@{check\_cornery}!WallArray@{WallArray}}
+\doxysubsubsection{\texorpdfstring{check\_cornery()}{check\_cornery()}}
+{\footnotesize\ttfamily void Wall\+Array\+::check\+\_\+cornery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sprawdzanie czy mozna usunac dolne sciany Nie przyjmuje argumentow Nie zwraca niczego Dziala na wewnetrznych zmiennych w obiekcie \mbox{\hyperlink{class_wall_array}{Wall\+Array}} \mbox{\Hypertarget{class_wall_array_a8f04021aaf302af5858ee47336feb609}\label{class_wall_array_a8f04021aaf302af5858ee47336feb609}} 
+\index{WallArray@{WallArray}!check\_empty@{check\_empty}}
+\index{check\_empty@{check\_empty}!WallArray@{WallArray}}
+\doxysubsubsection{\texorpdfstring{check\_empty()}{check\_empty()}}
+{\footnotesize\ttfamily void Wall\+Array\+::check\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sprawdzenie czy zbior pusty Nie pobiera argumentow Nie zwraca nicczego Dziala na wewnetrznych zmiennych w obiekcie \mbox{\hyperlink{class_wall_array}{Wall\+Array}} \mbox{\Hypertarget{class_wall_array_abbf45a896f023304ebae0584df7a65f4}\label{class_wall_array_abbf45a896f023304ebae0584df7a65f4}} 
+\index{WallArray@{WallArray}!end@{end}}
+\index{end@{end}!WallArray@{WallArray}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily deque$<$ \mbox{\hyperlink{class_wall}{Wall}} $>$\+::iterator Wall\+Array\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Znajduje wskaznik na koniec zbioru pojedynczych scian, ktory jest deque bedacym elementem klasy \mbox{\hyperlink{class_wall_array}{Wall\+Array}} Nie pobiera argumentow Zwraca deque$<$\+Wall$>$\+::iterator \mbox{\Hypertarget{class_wall_array_a6e7a189e8a8b4f4ff9e3d055dff9ac97}\label{class_wall_array_a6e7a189e8a8b4f4ff9e3d055dff9ac97}} 
+\index{WallArray@{WallArray}!get\_empty@{get\_empty}}
+\index{get\_empty@{get\_empty}!WallArray@{WallArray}}
+\doxysubsubsection{\texorpdfstring{get\_empty()}{get\_empty()}}
+{\footnotesize\ttfamily bool Wall\+Array\+::get\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sprawdzanie czy zbior scian w \mbox{\hyperlink{class_wall_array}{Wall\+Array}} jest pusty Nie pobiera argumentow Zwraca zmienna typu bool, ktora okresla, czy zbior scian jest pusty Dziala na wewnetrznych zmiennych w obiekcie \mbox{\hyperlink{class_wall_array}{Wall\+Array}} \mbox{\Hypertarget{class_wall_array_a5c3d185d1fb36bb6249c26d3302427e7}\label{class_wall_array_a5c3d185d1fb36bb6249c26d3302427e7}} 
+\index{WallArray@{WallArray}!update\_position@{update\_position}}
+\index{update\_position@{update\_position}!WallArray@{WallArray}}
+\doxysubsubsection{\texorpdfstring{update\_position()}{update\_position()}}
+{\footnotesize\ttfamily void Wall\+Array\+::update\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Aktualizacja pozycji wszystkich �cian Nie pobiera argumentow Wywoluje funkcje update\+\_\+position dla wszystkich pojedynczych scian \mbox{\Hypertarget{class_wall_array_a496c7d0fc570df0c0ba4f1c63d785f1c}\label{class_wall_array_a496c7d0fc570df0c0ba4f1c63d785f1c}} 
+\index{WallArray@{WallArray}!wall\_countdown@{wall\_countdown}}
+\index{wall\_countdown@{wall\_countdown}!WallArray@{WallArray}}
+\doxysubsubsection{\texorpdfstring{wall\_countdown()}{wall\_countdown()}}
+{\footnotesize\ttfamily void Wall\+Array\+::wall\+\_\+countdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Dorysowywanie nowych scian Nie pobiera argumentow Nie zwraca niczego Dziala na wewnetrznych zmiennych w obiekcie \mbox{\hyperlink{class_wall_array}{Wall\+Array}} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Więcej programów/\+Plansza/\+Console\+Application1/Level.\+h\item 
+D\+:/\+Więcej programów/\+Plansza/\+Console\+Application1/Level.\+cpp\end{DoxyCompactItemize}

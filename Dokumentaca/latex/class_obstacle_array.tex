@@ -1,0 +1,109 @@
+\hypertarget{class_obstacle_array}{}\doxysection{Obstacle\+Array Class Reference}
+\label{class_obstacle_array}\index{ObstacleArray@{ObstacleArray}}
+
+
+Klasa zbioru przeszkod.  
+
+
+
+
+{\ttfamily \#include $<$Obstacle.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obstacle_array_a6a09cf44146a5a8270f5f9c6108a44ab}{Obstacle\+Array}} ()
+\item 
+void \mbox{\hyperlink{class_obstacle_array_a3636944b53717eed94194e9c8ca7b788}{check\+\_\+empty}} ()
+\item 
+\mbox{\Hypertarget{class_obstacle_array_ae71003a60c5d235c30fbd72f8695b788}\label{class_obstacle_array_ae71003a60c5d235c30fbd72f8695b788}} 
+bool \mbox{\hyperlink{class_obstacle_array_ae71003a60c5d235c30fbd72f8695b788}{get\+\_\+empty}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca zmienna bool okreslajaca czy zbior przeszkod jest pusty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_obstacle_array_a46350f1a9f05a1dffe77515e391b722c}{obstacle\+\_\+countdown}} ()
+\item 
+void \mbox{\hyperlink{class_obstacle_array_a5e843e9dd0bae90184f32592fceb3efa}{check\+\_\+cornery}} ()
+\item 
+void \mbox{\hyperlink{class_obstacle_array_a0d11a22722023d7b790a04d19953612b}{update\+\_\+position}} ()
+\item 
+deque$<$ \mbox{\hyperlink{class_obstacle}{Obstacle}} $>$\+::iterator \mbox{\hyperlink{class_obstacle_array_aa383167c2c2591e4923b916a01cbbec6}{begin}} ()
+\item 
+deque$<$ \mbox{\hyperlink{class_obstacle}{Obstacle}} $>$\+::iterator \mbox{\hyperlink{class_obstacle_array_a990fbcb16c362e01ddc8c222d5b2b17c}{end}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_obstacle_array_a78a2d98bf3e11e0e1260aea8ad9eacf7}\label{class_obstacle_array_a78a2d98bf3e11e0e1260aea8ad9eacf7}} 
+Mat {\bfseries teks} \mbox{[}9\mbox{]}
+\item 
+\mbox{\Hypertarget{class_obstacle_array_af688f3367938988a87bf161c6061e596}\label{class_obstacle_array_af688f3367938988a87bf161c6061e596}} 
+Mat {\bfseries mask} \mbox{[}9\mbox{]}
+\item 
+\mbox{\Hypertarget{class_obstacle_array_a6aef4bd31687c64d38403f81c2e5c2df}\label{class_obstacle_array_a6aef4bd31687c64d38403f81c2e5c2df}} 
+int {\bfseries counter} = 100
+\item 
+\mbox{\Hypertarget{class_obstacle_array_acfe791ea8a3e9039201c9504d9dd4243}\label{class_obstacle_array_acfe791ea8a3e9039201c9504d9dd4243}} 
+float {\bfseries difficultymeter} = 0
+\item 
+\mbox{\Hypertarget{class_obstacle_array_aa0414506a9ddf1a95af51355b2ccdf10}\label{class_obstacle_array_aa0414506a9ddf1a95af51355b2ccdf10}} 
+float {\bfseries empty} = true
+\item 
+\mbox{\Hypertarget{class_obstacle_array_af2c5ba937023d916a1e4cf51b35a1cab}\label{class_obstacle_array_af2c5ba937023d916a1e4cf51b35a1cab}} 
+deque$<$ \mbox{\hyperlink{class_obstacle}{Obstacle}} $>$ {\bfseries things}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa zbioru przeszkod. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_obstacle_array_a6a09cf44146a5a8270f5f9c6108a44ab}\label{class_obstacle_array_a6a09cf44146a5a8270f5f9c6108a44ab}} 
+\index{ObstacleArray@{ObstacleArray}!ObstacleArray@{ObstacleArray}}
+\index{ObstacleArray@{ObstacleArray}!ObstacleArray@{ObstacleArray}}
+\doxysubsubsection{\texorpdfstring{ObstacleArray()}{ObstacleArray()}}
+{\footnotesize\ttfamily Obstacle\+Array\+::\+Obstacle\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Konstruktor zbioru scian Wczytuje tekstury Nie pobiera argumentow 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_obstacle_array_aa383167c2c2591e4923b916a01cbbec6}\label{class_obstacle_array_aa383167c2c2591e4923b916a01cbbec6}} 
+\index{ObstacleArray@{ObstacleArray}!begin@{begin}}
+\index{begin@{begin}!ObstacleArray@{ObstacleArray}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily deque$<$ \mbox{\hyperlink{class_obstacle}{Obstacle}} $>$\+::iterator Obstacle\+Array\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Znajduje wskaznik na poczatek zbioru pojedynczych przeszkod, ktory jest deque bedacym elementem klasy \mbox{\hyperlink{class_obstacle_array}{Obstacle\+Array}} Nie pobiera argumentow Zwraca deque$<$\+Obstacle$>$\+::iterator \mbox{\Hypertarget{class_obstacle_array_a5e843e9dd0bae90184f32592fceb3efa}\label{class_obstacle_array_a5e843e9dd0bae90184f32592fceb3efa}} 
+\index{ObstacleArray@{ObstacleArray}!check\_cornery@{check\_cornery}}
+\index{check\_cornery@{check\_cornery}!ObstacleArray@{ObstacleArray}}
+\doxysubsubsection{\texorpdfstring{check\_cornery()}{check\_cornery()}}
+{\footnotesize\ttfamily void Obstacle\+Array\+::check\+\_\+cornery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sprawdza czy przeszkode mozna usunac Nie pobiera argumentow Nie zwraca niczego Dziala na wewnetrznych zmiennych w \mbox{\hyperlink{class_obstacle_array}{Obstacle\+Array}} \mbox{\Hypertarget{class_obstacle_array_a3636944b53717eed94194e9c8ca7b788}\label{class_obstacle_array_a3636944b53717eed94194e9c8ca7b788}} 
+\index{ObstacleArray@{ObstacleArray}!check\_empty@{check\_empty}}
+\index{check\_empty@{check\_empty}!ObstacleArray@{ObstacleArray}}
+\doxysubsubsection{\texorpdfstring{check\_empty()}{check\_empty()}}
+{\footnotesize\ttfamily void Obstacle\+Array\+::check\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sprawdza czy zbior przeszkod jest pusty Nie pobiera argumentow Nie zwraca arguementow Zmienia wewnetrzna zmienna bool -\/ empty \mbox{\Hypertarget{class_obstacle_array_a990fbcb16c362e01ddc8c222d5b2b17c}\label{class_obstacle_array_a990fbcb16c362e01ddc8c222d5b2b17c}} 
+\index{ObstacleArray@{ObstacleArray}!end@{end}}
+\index{end@{end}!ObstacleArray@{ObstacleArray}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily deque$<$ \mbox{\hyperlink{class_obstacle}{Obstacle}} $>$\+::iterator Obstacle\+Array\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Znajduje wskaznik na koniec zbioru pojedynczych przeszkod, ktory jest deque bedacym elementem klasy \mbox{\hyperlink{class_obstacle_array}{Obstacle\+Array}} Nie pobiera argumentow Zwraca deque$<$\+Obstacle$>$\+::iterator \mbox{\Hypertarget{class_obstacle_array_a46350f1a9f05a1dffe77515e391b722c}\label{class_obstacle_array_a46350f1a9f05a1dffe77515e391b722c}} 
+\index{ObstacleArray@{ObstacleArray}!obstacle\_countdown@{obstacle\_countdown}}
+\index{obstacle\_countdown@{obstacle\_countdown}!ObstacleArray@{ObstacleArray}}
+\doxysubsubsection{\texorpdfstring{obstacle\_countdown()}{obstacle\_countdown()}}
+{\footnotesize\ttfamily void Obstacle\+Array\+::obstacle\+\_\+countdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Odlicza moment do wywolania konstruktora nowej przeszkody i go wywoluje Nie pobiera argumentow Nie zwraca niczego Dziala na wewnetrznych zmiennych w \mbox{\hyperlink{class_obstacle_array}{Obstacle\+Array}} \mbox{\Hypertarget{class_obstacle_array_a0d11a22722023d7b790a04d19953612b}\label{class_obstacle_array_a0d11a22722023d7b790a04d19953612b}} 
+\index{ObstacleArray@{ObstacleArray}!update\_position@{update\_position}}
+\index{update\_position@{update\_position}!ObstacleArray@{ObstacleArray}}
+\doxysubsubsection{\texorpdfstring{update\_position()}{update\_position()}}
+{\footnotesize\ttfamily void Obstacle\+Array\+::update\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sprawdza czy przeszkode mozna usunac Nie pobiera argumentow Nie zwraca niczego Wywoluje funkcje update\+\_\+position dla wszystkich pojedynczych przeszkod 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Więcej programów/\+Plansza/\+Console\+Application1/Obstacle.\+h\item 
+D\+:/\+Więcej programów/\+Plansza/\+Console\+Application1/Obstacle.\+cpp\end{DoxyCompactItemize}

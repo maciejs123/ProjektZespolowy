@@ -1,0 +1,201 @@
+\hypertarget{classplayer}{}\doxysection{player Class Reference}
+\label{classplayer}\index{player@{player}}
+
+
+Klasa odpowiedzialna za dynamike i rysowanie postaci gracza.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classplayer_a97de83bce15f880241f561b55b016b02}{player}} ()
+\item 
+\mbox{\hyperlink{classplayer_aaed4aa30cb5b3129bbfe2df41ab40dfd}{player}} (string c1, string c2, string c3, string j1, string j2, string f1, string f2, string d, int x, int y, bool air, bool side, bool djump)
+\item 
+void \mbox{\hyperlink{classplayer_a1c4579e19fdb26b6126bf1f26f26327f}{switch\+Side}} ()
+\item 
+void \mbox{\hyperlink{classplayer_ae966b6bd90d229aca73c638aaeb09bef}{jump}} ()
+\item 
+void \mbox{\hyperlink{classplayer_a5ec698815dc9395ff6314b34d9636055}{flight}} (double a, double p, double q, int speed, int frame\+No, int ceiling, int floor, int y, int \&x, int l\+Wall, int r\+Wall)
+\item 
+void \mbox{\hyperlink{classplayer_a768f15bfe050535dd431b4f6539afa88}{land}} (int left\+Wall, int right\+Wall)
+\item 
+void \mbox{\hyperlink{classplayer_a76ea114936a4b53a81f83e3037d069fe}{climb\+Up}} (int amount, int ceiling)
+\item 
+void \mbox{\hyperlink{classplayer_a14a1c8e6b90cd92a34ace28dee6a7769}{climb\+Down}} (int amount, int floor)
+\item 
+void \mbox{\hyperlink{classplayer_a23baa0c496abb3d5bfedd3da5847535f}{flip\+Sprites}} ()
+\item 
+void \mbox{\hyperlink{classplayer_a2d6314ade23b8c8cfb4de15c7cafa1d8}{draw\+Sprites}} (Mat image, int wyborS)
+\item 
+int \mbox{\hyperlink{classplayer_ac50c0ba1b12ca24507daa62e1428de95}{select\+Sprite}} (int frame\+No, int wyborS)
+\item 
+\mbox{\Hypertarget{classplayer_a1301a43665f17d0cd20e620c0ebc26e0}\label{classplayer_a1301a43665f17d0cd20e620c0ebc26e0}} 
+int {\bfseries get\+PosX} ()
+\item 
+\mbox{\Hypertarget{classplayer_a8b1fddaca861f79a7867687525bf059b}\label{classplayer_a8b1fddaca861f79a7867687525bf059b}} 
+int {\bfseries get\+PosY} ()
+\item 
+\mbox{\Hypertarget{classplayer_abb5f845f919e164d03bc2a4b4395111c}\label{classplayer_abb5f845f919e164d03bc2a4b4395111c}} 
+bool {\bfseries get\+Air\+Val} ()
+\item 
+\mbox{\Hypertarget{classplayer_ac0c8493b5d3638d24f2378abd99c6e53}\label{classplayer_ac0c8493b5d3638d24f2378abd99c6e53}} 
+bool {\bfseries get\+D\+Jump\+Val} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classplayer_a34175c036b45b01fd8a22dd2313687b8}\label{classplayer_a34175c036b45b01fd8a22dd2313687b8}} 
+bool {\bfseries side\+Left}
+\item 
+\mbox{\Hypertarget{classplayer_af9974b9d4383b0eab7650c176475da89}\label{classplayer_af9974b9d4383b0eab7650c176475da89}} 
+bool {\bfseries is\+Dead}
+\item 
+\mbox{\Hypertarget{classplayer_aacc45cc7a4fd29a74fc306af3a036d59}\label{classplayer_aacc45cc7a4fd29a74fc306af3a036d59}} 
+Mat {\bfseries climb1}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classplayer_af5fee545c07af835bcf6314bfc6dc3a5}\label{classplayer_af5fee545c07af835bcf6314bfc6dc3a5}} 
+Mat {\bfseries climb2}
+\item 
+\mbox{\Hypertarget{classplayer_afe7776ff9952a6c1a83016555446709a}\label{classplayer_afe7776ff9952a6c1a83016555446709a}} 
+Mat {\bfseries climb3}
+\item 
+\mbox{\Hypertarget{classplayer_a19e6c9e0afb7c7bf8e72081aab1220a5}\label{classplayer_a19e6c9e0afb7c7bf8e72081aab1220a5}} 
+Mat {\bfseries jump1}
+\item 
+\mbox{\Hypertarget{classplayer_a302619c5eee84c703072bf123b36260e}\label{classplayer_a302619c5eee84c703072bf123b36260e}} 
+Mat {\bfseries jump2}
+\item 
+\mbox{\Hypertarget{classplayer_a0f008e72038ef005793d2c4ebeabc629}\label{classplayer_a0f008e72038ef005793d2c4ebeabc629}} 
+Mat {\bfseries fly1}
+\item 
+\mbox{\Hypertarget{classplayer_af5b7cdef8b7c1b7fe3d7b2eb85586c89}\label{classplayer_af5b7cdef8b7c1b7fe3d7b2eb85586c89}} 
+Mat {\bfseries fly2}
+\item 
+\mbox{\Hypertarget{classplayer_af65218de4113c16754f4bbfa2615779d}\label{classplayer_af65218de4113c16754f4bbfa2615779d}} 
+Mat {\bfseries death}
+\item 
+\mbox{\Hypertarget{classplayer_a33bf20e36d88a9f516ab4e2d8952e416}\label{classplayer_a33bf20e36d88a9f516ab4e2d8952e416}} 
+Mat {\bfseries mask1}
+\item 
+\mbox{\Hypertarget{classplayer_abbd51e5aeee2fbc73cd9b3ed0ddc9ef7}\label{classplayer_abbd51e5aeee2fbc73cd9b3ed0ddc9ef7}} 
+Mat {\bfseries mask2}
+\item 
+\mbox{\Hypertarget{classplayer_a7ef62e61926690adc034d80570ac7fd0}\label{classplayer_a7ef62e61926690adc034d80570ac7fd0}} 
+Mat {\bfseries mask3}
+\item 
+\mbox{\Hypertarget{classplayer_aef730e763922e40e84b7eb700279502c}\label{classplayer_aef730e763922e40e84b7eb700279502c}} 
+Mat {\bfseries maskj1}
+\item 
+\mbox{\Hypertarget{classplayer_aa3c5ebb15549861579b6eb341d3acd9e}\label{classplayer_aa3c5ebb15549861579b6eb341d3acd9e}} 
+Mat {\bfseries maskj2}
+\item 
+\mbox{\Hypertarget{classplayer_ad98568e596f7676c03c2e5b0ed50becc}\label{classplayer_ad98568e596f7676c03c2e5b0ed50becc}} 
+Mat {\bfseries maskf1}
+\item 
+\mbox{\Hypertarget{classplayer_a1fa7e9268adc2176c48a64efa5df5f92}\label{classplayer_a1fa7e9268adc2176c48a64efa5df5f92}} 
+Mat {\bfseries maskf2}
+\item 
+\mbox{\Hypertarget{classplayer_a19e9e1f05aa020a01c71558b6b2f80d6}\label{classplayer_a19e9e1f05aa020a01c71558b6b2f80d6}} 
+Mat {\bfseries maskd}
+\item 
+\mbox{\Hypertarget{classplayer_a76fa4bdb73eceea4293ce25fe483f415}\label{classplayer_a76fa4bdb73eceea4293ce25fe483f415}} 
+bool {\bfseries is\+In\+Air}
+\item 
+\mbox{\Hypertarget{classplayer_aca5e323d88eb16b99645aca8df382b03}\label{classplayer_aca5e323d88eb16b99645aca8df382b03}} 
+bool {\bfseries double\+Jump}
+\item 
+\mbox{\Hypertarget{classplayer_a34c84177f4723438fbd5487e4492c11a}\label{classplayer_a34c84177f4723438fbd5487e4492c11a}} 
+int {\bfseries posX}
+\item 
+\mbox{\Hypertarget{classplayer_ab7fdc9e2f371d77588c365bba0a8bfe5}\label{classplayer_ab7fdc9e2f371d77588c365bba0a8bfe5}} 
+int {\bfseries posY}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa odpowiedzialna za dynamike i rysowanie postaci gracza. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classplayer_a97de83bce15f880241f561b55b016b02}\label{classplayer_a97de83bce15f880241f561b55b016b02}} 
+\index{player@{player}!player@{player}}
+\index{player@{player}!player@{player}}
+\doxysubsubsection{\texorpdfstring{player()}{player()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily player\+::player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Konstruktory domyslny postaci \mbox{\Hypertarget{classplayer_aaed4aa30cb5b3129bbfe2df41ab40dfd}\label{classplayer_aaed4aa30cb5b3129bbfe2df41ab40dfd}} 
+\index{player@{player}!player@{player}}
+\index{player@{player}!player@{player}}
+\doxysubsubsection{\texorpdfstring{player()}{player()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily player\+::player (\begin{DoxyParamCaption}\item[{string}]{c1,  }\item[{string}]{c2,  }\item[{string}]{c3,  }\item[{string}]{j1,  }\item[{string}]{j2,  }\item[{string}]{f1,  }\item[{string}]{f2,  }\item[{string}]{d,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{bool}]{air,  }\item[{bool}]{side,  }\item[{bool}]{djump }\end{DoxyParamCaption})}
+
+konstruktor argumentowy postaci, przyjmujacy x i y do ustawienia poczatkowej pozycji postaci, boole air, side i djump ustawiajace strone i stan postaci w powietrzu lub na scianie, oraz zmienne string c1,c2,c3,j1,j2,f1,f2,d przekazujace sciezke do sprite\textquotesingle{}ow 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classplayer_a14a1c8e6b90cd92a34ace28dee6a7769}\label{classplayer_a14a1c8e6b90cd92a34ace28dee6a7769}} 
+\index{player@{player}!climbDown@{climbDown}}
+\index{climbDown@{climbDown}!player@{player}}
+\doxysubsubsection{\texorpdfstring{climbDown()}{climbDown()}}
+{\footnotesize\ttfamily void player\+::climb\+Down (\begin{DoxyParamCaption}\item[{int}]{amount,  }\item[{int}]{floor }\end{DoxyParamCaption})}
+
+podwyzsza pozycje wertykalna (y) postaci o amount tak dlugo jak nie przekroczy y = floor \mbox{\Hypertarget{classplayer_a76ea114936a4b53a81f83e3037d069fe}\label{classplayer_a76ea114936a4b53a81f83e3037d069fe}} 
+\index{player@{player}!climbUp@{climbUp}}
+\index{climbUp@{climbUp}!player@{player}}
+\doxysubsubsection{\texorpdfstring{climbUp()}{climbUp()}}
+{\footnotesize\ttfamily void player\+::climb\+Up (\begin{DoxyParamCaption}\item[{int}]{amount,  }\item[{int}]{ceiling }\end{DoxyParamCaption})}
+
+podwyzsza pozycje wertykalna (y) postaci o amount tak dlugo jak nie spadnie ponizej y = ceiling \mbox{\Hypertarget{classplayer_a2d6314ade23b8c8cfb4de15c7cafa1d8}\label{classplayer_a2d6314ade23b8c8cfb4de15c7cafa1d8}} 
+\index{player@{player}!drawSprites@{drawSprites}}
+\index{drawSprites@{drawSprites}!player@{player}}
+\doxysubsubsection{\texorpdfstring{drawSprites()}{drawSprites()}}
+{\footnotesize\ttfamily void player\+::draw\+Sprites (\begin{DoxyParamCaption}\item[{Mat}]{image,  }\item[{int}]{wyborS }\end{DoxyParamCaption})}
+
+rysuje wybranego sprite\textquotesingle{}a na Matryce Image w zaleznosci od wyborS\+: 0 1 2 3 -\/ sprite\textquotesingle{}y wchodzenia na sciane, 4 5 -\/ sprite\textquotesingle{}y wyskoku; 6 7 -\/ sprite\textquotesingle{}y skoku (lotu); 8 -\/ sprite smierci \mbox{\Hypertarget{classplayer_a5ec698815dc9395ff6314b34d9636055}\label{classplayer_a5ec698815dc9395ff6314b34d9636055}} 
+\index{player@{player}!flight@{flight}}
+\index{flight@{flight}!player@{player}}
+\doxysubsubsection{\texorpdfstring{flight()}{flight()}}
+{\footnotesize\ttfamily void player\+::flight (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{p,  }\item[{double}]{q,  }\item[{int}]{speed,  }\item[{int}]{frame\+No,  }\item[{int}]{ceiling,  }\item[{int}]{floor,  }\item[{int}]{y,  }\item[{int \&}]{x,  }\item[{int}]{l\+Wall,  }\item[{int}]{r\+Wall }\end{DoxyParamCaption})}
+
+oblicza lot postaci w zaleznosci od numeru klatki frame\+No z predkoscia speed, w postaci paraboli a$\ast$(x -\/ p)$\ast$(x -\/ q), przyjmujac x i y jako miejsce startowe postaci, ograniczajac pozycje postaci podczas lotu przez ceiling, floor, l\+Wall i r\+Wall \mbox{\Hypertarget{classplayer_a23baa0c496abb3d5bfedd3da5847535f}\label{classplayer_a23baa0c496abb3d5bfedd3da5847535f}} 
+\index{player@{player}!flipSprites@{flipSprites}}
+\index{flipSprites@{flipSprites}!player@{player}}
+\doxysubsubsection{\texorpdfstring{flipSprites()}{flipSprites()}}
+{\footnotesize\ttfamily void player\+::flip\+Sprites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+obraca wszystkie sprite\textquotesingle{}y postaci oraz ich maski horyzontalnie \mbox{\Hypertarget{classplayer_ae966b6bd90d229aca73c638aaeb09bef}\label{classplayer_ae966b6bd90d229aca73c638aaeb09bef}} 
+\index{player@{player}!jump@{jump}}
+\index{jump@{jump}!player@{player}}
+\doxysubsubsection{\texorpdfstring{jump()}{jump()}}
+{\footnotesize\ttfamily void player\+::jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+ustawia is\+In\+Air na true jesli postac nie jest w powietrzu, a jesli jest, sprawdza, czy jest dostepny podwojny skok, zmieniajac strone postaci. \mbox{\Hypertarget{classplayer_a768f15bfe050535dd431b4f6539afa88}\label{classplayer_a768f15bfe050535dd431b4f6539afa88}} 
+\index{player@{player}!land@{land}}
+\index{land@{land}!player@{player}}
+\doxysubsubsection{\texorpdfstring{land()}{land()}}
+{\footnotesize\ttfamily void player\+::land (\begin{DoxyParamCaption}\item[{int}]{left\+Wall,  }\item[{int}]{right\+Wall }\end{DoxyParamCaption})}
+
+sprawdza czy uzytkownik wyladowal na jednej ze scian o koordynatach x\+: left\+Wall lub right\+Wall, w zaleznosci od tego po ktorej byl stronie, jesli tak to przestaje skakac \mbox{\Hypertarget{classplayer_ac50c0ba1b12ca24507daa62e1428de95}\label{classplayer_ac50c0ba1b12ca24507daa62e1428de95}} 
+\index{player@{player}!selectSprite@{selectSprite}}
+\index{selectSprite@{selectSprite}!player@{player}}
+\doxysubsubsection{\texorpdfstring{selectSprite()}{selectSprite()}}
+{\footnotesize\ttfamily int player\+::select\+Sprite (\begin{DoxyParamCaption}\item[{int}]{frame\+No,  }\item[{int}]{wyborS }\end{DoxyParamCaption})}
+
+dopasowuje wybor sprite w zaleznosci na ktorej klatce w petli jestesmy, zwraca int z jedna z wartosci\+: 0 1 2 3 -\/ sprite\textquotesingle{}y wchodzenia na sciane; 4 5 6 7 -\/ sprite\textquotesingle{}y skoku; 8 -\/ sprite smierci. \mbox{\Hypertarget{classplayer_a1c4579e19fdb26b6126bf1f26f26327f}\label{classplayer_a1c4579e19fdb26b6126bf1f26f26327f}} 
+\index{player@{player}!switchSide@{switchSide}}
+\index{switchSide@{switchSide}!player@{player}}
+\doxysubsubsection{\texorpdfstring{switchSide()}{switchSide()}}
+{\footnotesize\ttfamily void player\+::switch\+Side (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+odwraca wartosc boola side\+Left w celu zmienienia strony postaci oraz uzywa metody \mbox{\hyperlink{classplayer_a23baa0c496abb3d5bfedd3da5847535f}{flip\+Sprites()}} do obrocenia wszystkich obrazkow 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Więcej programów/\+Plansza/\+Console\+Application1/Player.\+h\item 
+D\+:/\+Więcej programów/\+Plansza/\+Console\+Application1/Player.\+cpp\end{DoxyCompactItemize}
