@@ -13,6 +13,7 @@
 using namespace std;
 using namespace cv;
 
+///Klasa pojedynczej przeszkody
 class Obstacle
 {
 public:
@@ -28,17 +29,18 @@ private:
 	Obstacle();
 
 public:
-	bool check_position(int x, int y);
 	void update_position();
 	friend class ObstacleArray;
 };
 
+///Klasa zbioru przeszkod
 class ObstacleArray
 {
 public:
 	Mat teks[9];
 	Mat mask[9];
-	int counter = 0;
+	int counter = 100;
+	float difficultymeter = 0;
 	float empty = true;
 
 	ObstacleArray();
@@ -49,7 +51,6 @@ public:
 	void obstacle_countdown();
 	void check_cornery();
 	void update_position();
-	bool check_postion(int x, int y);
 	deque<Obstacle>::iterator begin();
 	deque<Obstacle>::iterator end();
 

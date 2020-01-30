@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc.hpp>
@@ -13,7 +12,8 @@
 using namespace std;
 using namespace cv;
 
-
+///Konstruktor pojedynczej przeszkody
+///Ustala jej poloznenie i grafike
 Obstacle::Obstacle()
 {
 	checksum = rand();
@@ -32,7 +32,7 @@ Obstacle::Obstacle()
 		height = 200;
 		width = 200;
 		flipper = true;
-
+		
 		checksum = (checksum / 3) % 3;
 		cornerx = 1020 - width;
 	}
@@ -41,27 +41,25 @@ Obstacle::Obstacle()
 		height = 100;
 		width = 100;
 
-		checksum = ((checksum / 3) % 6) + 3;
+		checksum = ((checksum / 3) % 6)+3;
 		cornerx = 600 - (width / 2);
 	}
 	limbocornery = 0;
 	cornery = limbocornery - 200;
 }
 
-bool Obstacle::check_position(int x, int y)
-{
-	if (((x >= cornerx) && (x <= (cornerx + width))) && ((y >= cornery) && (y <= (cornery + height))))
-		return true;
-	else
-		return false;
-
-}
+///Aktualizacja pozycji pojedynczej sciany
+///Nie pobiera argumentow
+///Nie zwraca niczego
+///Dziala na wewnetrznych zmiennych obiektu Obstacle
 void Obstacle::update_position()
 {
 	limbocornery += 20;
 	cornery += 20;
 }
-
+///Konstruktor zbioru scian
+///Wczytuje tekstury
+///Nie pobiera argumentow
 ObstacleArray::ObstacleArray()
 {
 	teks[0] = imread("Assets/Obstacles/BlueFlag.png", IMREAD_UNCHANGED);
@@ -74,7 +72,7 @@ ObstacleArray::ObstacleArray()
 	teks[7] = imread("Assets/Obstacles/BlackFlowerPot.png", IMREAD_UNCHANGED);
 	teks[8] = imread("Assets/Obstacles/BrownFlowerPot.png", IMREAD_UNCHANGED);
 
-
+	
 
 
 	Size size_one(200, 200);
@@ -94,7 +92,10 @@ ObstacleArray::ObstacleArray()
 		mask[i] = rgbLayer[3];
 	}
 }
-
+///Sprawdza czy zbior przeszkod jest pusty
+///Nie pobiera argumentow
+///Nie zwraca arguementow
+///Zmienia wewnetrzna zmienna bool - empty
 void ObstacleArray::check_empty()
 {
 	if (things.size() == 0)
@@ -104,21 +105,35 @@ void ObstacleArray::check_empty()
 
 }
 
+///Zwraca zmienna bool okreslajaca czy zbior przeszkod jest pusty
 bool ObstacleArray::get_empty()
 {
 	return empty;
 }
+
+///Odlicza moment do wywolania konstruktora nowej przeszkody i go wywoluje
+///Nie pobiera argumentow
+///Nie zwraca niczego
+///Dziala na wewnetrznych zmiennych w ObstacleArray
 void ObstacleArray::obstacle_countdown()
 {
 	if (counter == 0)
 	{
 		things.push_back(Obstacle());
-		counter = 20 + (rand() % 80);
+		counter = (70 - (int)difficultymeter) + (rand() % (80 - (int)difficultymeter));
+		if (difficultymeter < 60.0)
+			difficultymeter += 1;
 	}
 	else
 		counter--;
 
 }
+
+///Sprawdza czy przeszkode mozna usunac
+///Nie pobiera argumentow
+///Nie zwraca niczego
+///Dziala na wewnetrznych zmiennych w ObstacleArray
+
 void ObstacleArray::check_cornery()
 {
 	if (things[0].cornery > 1200)
@@ -126,6 +141,11 @@ void ObstacleArray::check_cornery()
 		things.pop_front();
 	}
 }
+
+///Sprawdza czy przeszkode mozna usunac
+///Nie pobiera argumentow
+///Nie zwraca niczego
+///Wywoluje funkcje update_position dla wszystkich pojedynczych przeszkod
 void ObstacleArray::update_position()
 {
 	for (int i = 0; i<things.size(); i++)
@@ -133,18 +153,16 @@ void ObstacleArray::update_position()
 		things[i].update_position();
 	}
 }
-
-bool ObstacleArray::check_postion(int x, int y)
-{
-	for (Obstacle ob : things)
-		if (ob.check_position(x, y))
-			return true;
-	return false;
-}
+///Znajduje wskaznik na poczatek zbioru pojedynczych przeszkod, ktory jest deque bedacym elementem klasy ObstacleArray 
+///Nie pobiera argumentow
+///Zwraca deque<Obstacle>::iterator
 deque<Obstacle>::iterator ObstacleArray::begin()
 {
 	return this->things.begin();
 }
+///Znajduje wskaznik na koniec zbioru pojedynczych przeszkod, ktory jest deque bedacym elementem klasy ObstacleArray 
+///Nie pobiera argumentow
+///Zwraca deque<Obstacle>::iterator
 deque<Obstacle>::iterator ObstacleArray::end()
 {
 	return this->things.end();
